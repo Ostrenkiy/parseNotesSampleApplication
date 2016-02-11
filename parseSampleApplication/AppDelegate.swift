@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Parse
+import IQKeyboardManagerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +18,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        IQKeyboardManager.sharedManager().enable = true
+        IQKeyboardManager.sharedManager().shouldResignOnTouchOutside = true
+        IQKeyboardManager.sharedManager().keyboardDistanceFromTextField = 24
+        IQKeyboardManager.sharedManager().enableAutoToolbar = false
+        
+        Parse.setApplicationId("XxJ1T3FU9t353mBtov2lGzFAQThrh34xIJlXU4Xw", clientKey: "KzfJWZ1siSFonHrzdxpoyjy0OI9YxAoMnw9tEf45")
         return true
     }
 
